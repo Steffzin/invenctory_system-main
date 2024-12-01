@@ -1,0 +1,44 @@
+<!DOCTYPE html>  <!-- Define o tipo de documento como HTML5 -->
+<html lang="en">  <!-- Inicia o documento HTML, especificando que o idioma da página é inglês -->
+<head>  <!-- Começo da seção de cabeçalho do HTML -->
+    <meta charset="UTF-8">  <!-- Define a codificação de caracteres para UTF-8 (suporta caracteres especiais e internacionais) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Define as configurações de visualização para dispositivos móveis (escala e largura da tela) -->
+    <title>Inventário de Jogos</title>  <!-- Define o título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="styles.css">  <!-- Vincula o arquivo CSS externo para o estilo da página -->
+</head>  <!-- Fim da seção de cabeçalho -->
+<body>  <!-- Início da seção do corpo da página -->
+    <h1>Inventário de Jogos</h1>  <!-- Exibe o título principal da página -->
+    <div id="inventory"></div>  <!-- Cria uma div com id "inventory" que será usada para exibir os itens do inventário -->
+
+    <button id="add-item-button">Adicionar Item</button>  <!-- Botão para abrir o popup de adicionar item -->
+
+    <!-- Popup para adicionar item -->
+    <div id="add-popup" class="popup">  <!-- Define um container para o popup de adicionar item, com a classe "popup" -->
+        <div class="popup-content">  <!-- Define o conteúdo do popup -->
+            <h2>Adicionar Novo Item</h2>  <!-- Título do popup de adicionar item -->
+            <form id="add-item-form">  <!-- Início de um formulário para adicionar um item ao inventário -->
+                <input type="text" id="item-nome" placeholder="Nome" required>  <!-- Campo de entrada para o nome do item -->
+                <input type="text" id="item-descricao" placeholder="Descrição" required>  <!-- Campo de entrada para a descrição do item -->
+                <input type="number" id="item-quantidade" placeholder="Quantidade" required>  <!-- Campo de entrada para a quantidade do item -->
+                <input type="number" id="item-preco" placeholder="Preço" step="0.01" required>  <!-- Campo de entrada para o preço do item (com 2 casas decimais) -->
+                <button type="submit">Adicionar</button>  <!-- Botão para submeter o formulário e adicionar o item -->
+                <button type="button" id="cancel-add">Cancelar</button>  <!-- Botão para fechar o popup de adicionar item sem salvar -->
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup para atualizar item -->
+    <div id="update-popup" class="popup">  <!-- Define um container para o popup de atualizar item, com a classe "popup" -->
+        <div class="popup-content">  <!-- Define o conteúdo do popup -->
+            <h2>Atualizar Quantidade</h2>  <!-- Título do popup de atualizar item -->
+            <form id="update-item-form">  <!-- Início de um formulário para atualizar a quantidade de um item -->
+                <input type="number" id="update-quantidade" placeholder="Nova Quantidade" required>  <!-- Campo de entrada para a nova quantidade do item -->
+                <button type="submit">Atualizar</button>  <!-- Botão para submeter o formulário e atualizar o item -->
+                <button type="button" id="cancel-update">Cancelar</button>  <!-- Botão para fechar o popup de atualizar item sem salvar -->
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>  <!-- Vincula o arquivo JavaScript externo para funcionalidade interativa da página -->
+</body>  <!-- Fim da seção do corpo -->
+</html>  <!-- Fim do documento HTML -->

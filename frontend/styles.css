@@ -1,0 +1,99 @@
+/* Reset básico */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui bordas e preenchimento no cálculo da largura e altura */
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte do corpo como Arial, com uma alternativa sans-serif */
+    background-color: #f4f4f9; /* Cor de fundo suave e clara para o corpo */
+    color: #333; /* Cor do texto principal (cinza escuro) */
+    margin: 20px; /* Adiciona um espaço de 20px ao redor da página */
+    padding: 10px; /* Adiciona um pequeno preenchimento de 10px ao redor da página */
+}
+
+/* Títulos */
+h1, h2 {
+    color: #2c3e50; /* Cor escura para os títulos */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px para separar o título do conteúdo abaixo */
+    text-align: center; /* Centraliza o texto dos títulos */
+}
+
+/* Estilo do inventário */
+#inventory {
+    display: grid; /* Define um layout de grid para o contêiner do inventário */
+    grid-template-columns: 1fr 1fr; /* Cria duas colunas de tamanho igual dentro do grid */
+    gap: 20px; /* Adiciona um espaço de 20px entre os itens do inventário */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px para separar o inventário do conteúdo abaixo */
+}
+
+#inventory div {
+    background-color: #fff; /* Define o fundo branco para cada item no inventário */
+    padding: 15px; /* Adiciona 15px de preenchimento dentro de cada item */
+    border-radius: 8px; /* Bordas arredondadas de 8px para cada item */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave e leve ao redor de cada item */
+    transition: all 0.3s ease-in-out; /* Transição suave para qualquer mudança de estilo (efeitos visuais) */
+}
+
+#inventory div:hover {
+    transform: translateY(-5px); /* Move o item 5px para cima quando o mouse passa por cima */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra quando o item é focado */
+}
+
+/* Botões */
+button {
+    background-color: #3498db; /* Define o fundo do botão como azul */
+    color: #fff; /* Cor do texto do botão como branco */
+    border: none; /* Remove a borda do botão */
+    padding: 8px 12px; /* Define o preenchimento do botão (8px vertical, 12px horizontal) */
+    border-radius: 5px; /* Bordas arredondadas de 5px para o botão */
+    cursor: pointer; /* Altera o cursor para uma mãozinha ao passar por cima do botão */
+    font-size: 14px; /* Define o tamanho da fonte do botão */
+    transition: background-color 0.3s ease; /* Transição suave para a mudança da cor de fundo */
+    margin: 5px; /* Adiciona 5px de margem ao redor do botão */
+}
+
+button:hover {
+    background-color: #2980b9; /* Muda a cor do botão para um tom mais escuro de azul quando o mouse passa por cima */
+}
+
+/* Estilo dos popups */
+.popup {
+    display: none; /* Inicialmente, o popup está oculto */
+    position: fixed; /* O popup fica fixo na tela, independentemente do rolar da página */
+    top: 0; /* Posiciona o popup no topo da tela */
+    left: 0; /* Posiciona o popup à esquerda da tela */
+    width: 100%; /* Faz o popup ocupar toda a largura da tela */
+    height: 100%; /* Faz o popup ocupar toda a altura da tela */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente (preto) para cobrir o restante da tela */
+    justify-content: center; /* Alinha o conteúdo do popup no centro verticalmente */
+    align-items: center; /* Alinha o conteúdo do popup no centro horizontalmente */
+    z-index: 9999; /* Garante que o popup ficará acima de outros conteúdos na página */
+}
+
+.popup-content {
+    background-color: #fff; /* Define o fundo branco para o conteúdo do popup */
+    padding: 20px; /* Adiciona 20px de preenchimento dentro do popup */
+    border-radius: 10px; /* Bordas arredondadas de 10px no conteúdo do popup */
+    text-align: center; /* Centraliza o texto dentro do conteúdo do popup */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao redor do conteúdo do popup */
+}
+
+.popup-content form {
+    display: flex; /* Define o layout do formulário como flexível */
+    flex-direction: column; /* Organiza os elementos do formulário em uma coluna */
+    gap: 15px; /* Adiciona 15px de espaço entre os elementos do formulário */
+}
+
+.popup-content button {
+    margin-top: 10px; /* Adiciona uma margem superior de 10px para o botão dentro do popup */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #inventory {
+        grid-template-columns: 1fr; /* Para telas pequenas, ajusta o inventário para uma única coluna */
+    }
+}
